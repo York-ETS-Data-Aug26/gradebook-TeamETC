@@ -22,11 +22,14 @@ def top(roster, args):
     best_student = max(roster, key=lambda name: mean(roster[name]))
     print(best_student, mean(roster[best_student]))
 
+def find(roster, args):
+    name = args[0]
+    print(find_student(roster, name))
 
 COMMANDS = {
     "help": show_help,
     "load": load,
-    "find": find_student,
+    "find": find,
     "average": mean,
     "top": top,
     "summary": summary
