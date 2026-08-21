@@ -1,13 +1,12 @@
 """Gradebook command line interface."""
 import sys
 
-from gradebook import reports
+from gradebook.reports import mean, summary
 from gradebook.errors import GradebookError
 
 from gradebook.storage import load
 
 from gradebook.roster import find_student
-from gradebook.reports import average
 
 
 DATA_FILE = "roster.json"
@@ -20,16 +19,17 @@ def top(roster, args):
     if not roster:
         print("no students in roster")
         return
-    best_student = max(roster, key=lambda name: average(roster[name]))
-    print(best_student, average(roster[best_student]))
+    best_student = max(roster, key=lambda name: mean(roster[name]))
+    print(best_student, mean(roster[best_student]))
 
 
 COMMANDS = {
     "help": show_help,
     "load": load,
     "find": find_student,
-    "average": reports.mean,
-    "top": top
+    "average": mean,
+    "top": top,
+    "summary": summary
 }
 
 
