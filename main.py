@@ -1,4 +1,5 @@
 """Gradebook command line interface."""
+import reports
 import sys
 
 from gradebook.errors import GradebookError
@@ -22,6 +23,7 @@ COMMANDS = {
 
     "find": find_student
 
+    "average": reports.average
 }
 
 
