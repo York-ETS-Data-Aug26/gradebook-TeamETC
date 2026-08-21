@@ -1,7 +1,7 @@
 """Gradebook command line interface."""
 import sys
 
-from gradebook.reports import mean, summary
+from gradebook.reports import mean, run_summary
 from gradebook.errors import GradebookError
 
 from gradebook.storage import load
@@ -29,7 +29,7 @@ COMMANDS = {
     "find": find_student,
     "average": mean,
     "top": top,
-    "summary": summary
+    "summary": run_summary
 }
 
 

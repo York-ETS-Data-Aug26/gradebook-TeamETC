@@ -33,6 +33,13 @@ def summary(roster):
     lines.append("==============================")
     return "\n".join(lines)
 
+def run_summary(roster_dict, args):
+    report_list = []
+    for name, scores in roster_dict.items():
+        report_list.append({"name": name, "scores": scores})
+
+    print(summary(report_list))
+
 # checking with if is correct here whereas catching would not be because we
 # are attempting to filter out formatting issues as opposed to actually
 # catching logic or syntax error in the code
