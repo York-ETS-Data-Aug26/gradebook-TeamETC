@@ -23,8 +23,8 @@ def top(roster, args):
     print(best_student, mean(roster[best_student]))
 
 #fixing load to work
-def path_load(roster, args):
-    path = args[0] if args else DATA_FILE
+def load_path(roster, args):
+    path = args[0]
     data = load(path)
     roster.clear()
     roster.update(data)
@@ -32,7 +32,7 @@ def path_load(roster, args):
 
 COMMANDS = {
     "help": show_help,
-    "load": load,
+    "load": load_path,
     "find": find_student,
     "average": mean,
     "top": top,
