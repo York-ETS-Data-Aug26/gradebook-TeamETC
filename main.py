@@ -2,11 +2,11 @@
 import sys
 
 from gradebook.errors import GradebookError
-<<<<<<< HEAD
+
 from gradebook.storage import load
-=======
+
 from gradebook.roster import find_student
->>>>>>> 2b9c3dafa7c9959b888b98a704e5b993a8be571d
+
 
 DATA_FILE = "roster.json"
 
@@ -17,11 +17,11 @@ def show_help(roster, args):
 
 COMMANDS = {
     "help": show_help,
-<<<<<<< HEAD
+
     "load": load,
-=======
+
     "find": find_student
->>>>>>> 2b9c3dafa7c9959b888b98a704e5b993a8be571d
+
 }
 
 
