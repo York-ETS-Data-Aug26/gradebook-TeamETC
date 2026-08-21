@@ -22,6 +22,13 @@ def top(roster, args):
     best_student = max(roster, key=lambda name: mean(roster[name]))
     print(best_student, mean(roster[best_student]))
 
+#fixing load to work
+def path_load(roster, args):
+    path = args[0] if args else None
+    data = load(path)
+    roster.clear()
+    roster.update(data)
+
 
 COMMANDS = {
     "help": show_help,
