@@ -20,7 +20,7 @@ COMMANDS = {
     "help": show_help,
     "load": load,
     "find": find_student,
-    "average:": reports.average
+    "average": reports.average
 }
 
 
