@@ -1,10 +1,6 @@
 """Statistics and formatted output. Owner: C."""
 from gradebook.errors import ReportError
 
-
-def average(scores):
-    return sum(scores) / len(scores)
-
 def mean(scores):
     if not scores:
         raise ReportError("No scores provided")
