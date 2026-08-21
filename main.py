@@ -42,9 +42,7 @@ def run_average(roster_dict, args):
 
     student_name = args[0]
     try:
-        # Step 1: Use Owner A's function to get the student's score list
         scores = find_student(roster_dict, student_name)
-        # Step 2: Pass that list into Owner C's mean calculation function
         student_avg = mean(scores)
         print(f"{student_name}'s Average Grade: {student_avg:.2f}")
     except GradebookError as e:
@@ -65,7 +63,7 @@ COMMANDS = {
     "help": show_help,
     "load": load_path,
     "find": find,
-    "average": mean,
+    "average": run_average,
     "top": top,
     "summary": run_summary
 }
