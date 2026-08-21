@@ -2,6 +2,7 @@
 import sys
 
 from gradebook.errors import GradebookError
+from gradebook.storage import load
 
 DATA_FILE = "roster.json"
 
@@ -12,6 +13,7 @@ def show_help(roster, args):
 
 COMMANDS = {
     "help": show_help,
+    "load": load,
 }
 
 
