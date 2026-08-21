@@ -1,4 +1,5 @@
 """Statistics and formatted output. Owner: C."""
+from gradebook.errors import ReportError
 
 
 def average(scores):

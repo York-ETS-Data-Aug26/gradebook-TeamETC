@@ -1,6 +1,7 @@
 """Gradebook command line interface."""
 import sys
 
+from gradebook import reports
 from gradebook.errors import GradebookError
 
 from gradebook.storage import load
@@ -18,7 +19,8 @@ def show_help(roster, args):
 COMMANDS = {
     "help": show_help,
     "load": load,
-    "find": find_student
+    "find": find_student,
+    "average:": reports.average
 }
 
 
