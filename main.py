@@ -24,7 +24,7 @@ def top(roster, args):
 
 #fixing load to work
 def path_load(roster, args):
-    path = args[0] if args else None
+    path = args[0] if args else DATA_FILE
     data = load(path)
     roster.clear()
     roster.update(data)
